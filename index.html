@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 4rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            padding: 0.75rem 1.25rem;   
+            border: 0;
+            border-radius: 6px;
+            background-color: #2563eb;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola Mundo desde mi primer proyecto</h1>
+    <button id="cambiar-color" type="button">Cambiar color de fondo</button>
+
+    <script>
+        const boton = document.getElementById('cambiar-color');
+        const colores = ['#fef3c7', '#dcfce7', '#dbeafe', '#fce7f3'];
+        let colorActual = 0;
+
+        boton.addEventListener('click', () => {
+            document.body.style.backgroundColor = colores[colorActual];
+            colorActual = (colorActual + 1) % colores.length;
+        });
+    </script>
+</body>
+</html>
